@@ -38,9 +38,21 @@ button:active{
 }
 
 body{
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen-container{
   display: flex;
   justify-content: center;
   align-items: flex-end;
   height: 100vh;
-  background-color: aliceblue;
+}
+
+.span{
+  position: absolute;
+  right:15px;
+  top:15px;
 }
