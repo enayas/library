@@ -1,4 +1,4 @@
-button{
+#new-book-button{
   display: flex;
   background-color: cornflowerblue;
   border:none;
@@ -14,11 +14,11 @@ button{
   transition: 0.25s;
 }
 
-button:hover{
+#new-book-button:hover{
   background-color: rgb(171, 200, 255);
 }
 
-button:active{
+#new-book-button:active{
   background-color: rgb(204, 221, 253);
 }
 
@@ -60,3 +60,43 @@ body{
 .invisible{
   display:none;
 }
+
+#form{
+}
+
+dialog{
+  padding:50px;
+  min-width:35vh;
+  min-height:50vh;
+  border:none;
+  border-radius:20px;
+  background-color: cornflowerblue;
+  box-shadow: 5px 5px 10px lightgray;
+}
+
+dialog::backdrop{
+  background-color: rgba(240, 248, 255, 0.3);
+}
+
+.label-and-input{
+  display: flex;
+  flex-direction: column;
+}
+
+.close-icon{
+  top:5px;
+  left:5px;
+}
+
+.text-input{
+  border:none;
+  border-radius: 5px;
+}
+
+label{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+  margin-bottom: 5px;
+  margin-top:10px;
+}
+

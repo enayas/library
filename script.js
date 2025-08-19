@@ -19,10 +19,10 @@ function addBookToLibrary(title, author, pages, read){
 // const book2 = new Book("The Poppy War", "R.F. Kuang", 544, false);
 // const book3 = new Book("Animal Farm", "George Orwell", 144, true);
 
-const modal = document.querySelector("#addBookModal");
+const modal = document.querySelector("#add-book-modal");
 
 // event listeners
-const newBookButton = document.querySelector("#newBookButton");
+const newBookButton = document.querySelector("#new-book-button");
 newBookButton.addEventListener("click", () =>{
   modal.showModal();
 });

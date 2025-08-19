@@ -8,13 +8,42 @@
 </head>
 <body>
   <div class="screen-container">
-    <button id="newBookButton">
+    <button id="new-book-button">
       <img class="add-book-icon" src="assets/add-book.svg">
       <span class="label">New Book</span>
     </button>
   </div>
-  <dialog class="modal" id="addBookModal">
-    <h2>Add a New Book:</h2>
+  <dialog class="modal" id="add-book-modal">
+    <div class="header">
+      <div class="close-icon">&times;</div>
+      <h2>Add a New Book:</h2>
+    </div>
+    <form>
+      <div id="form">
+        <div class="label-and-input">
+          <label for="title">Title</label>
+          <input id="title" class = "text-input" name="title" type="text">
+        </div>
+  
+        <div class="label-and-input">
+          <label for="author">Author</label>
+          <input id="author" class = "text-input" name="author" type="text">
+        </div>
+
+        <div class="label-and-input">
+          <label for="pages">Number of Pages</label>
+          <input id="pages" class = "text-input" name="pages" type="number">
+        </div>
+  
+        <div>
+          <label for="read-status">Read?</label>
+          <input id="read-status" name="read-status" type="checkbox">
+        </div>
+      </div>
+        <button id="add-button"type="submit">
+          Add
+        </button>
+    </form>
   </dialog>
   <script src="script.js"></script>
 </body>
