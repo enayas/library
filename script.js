@@ -18,3 +18,16 @@ function addBookToLibrary(title, author, pages, read){
 const book1 = new Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", 309, true);
 const book2 = new Book("The Poppy War", "R.F. Kuang", 544, false);
 const book3 = new Book("Animal Farm", "George Orwell", 144, true);
+
+// modal functions
+const modal = document.querySelector("#addBookModal");
+function showModal(){
+
+}
+
+// event listeners
+const newBookButton = document.querySelector("#newBookButton");
+newBookButton.onClick = () => {
+  showModal();
+}
+
