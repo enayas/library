@@ -8,7 +8,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px;
-  position: absolute;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
   margin-bottom:30px;
   cursor: pointer;
   transition: 0.25s;
@@ -39,29 +41,19 @@
 
 body{
   background-color: aliceblue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin:0;
 }
 
 .screen-container{
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 100vh;
 }
 
 .span{
   position: absolute;
   right:15px;
   top:15px;
-}
-
-.invisible{
-  display:none;
-}
-
-#form{
 }
 
 dialog{
@@ -89,14 +81,69 @@ dialog::backdrop{
 }
 
 .text-input{
-  border:none;
-  border-radius: 5px;
+  border:1px solid aliceblue;
+  border-radius: 2px;
+  background-color: rgb(128, 166, 235);
+  min-height:20px;
+  caret-color:aliceblue;
+  accent-color:rgb(128, 166, 235);
+}
+
+.text-input:focus{
+  outline: none;
+  border: 1px solid rgb(60, 113, 213)
+}
+#read-status{
+  margin-top:20px;
+  margin-bottom:5px;
 }
 
 label{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: small;
   margin-bottom: 5px;
-  margin-top:10px;
+  margin-top:20px;
+  color:aliceblue;
 }
 
+.button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:aliceblue;
+}
+
+#add-button{
+  margin-top:30px;
+  min-width:200px;
+  min-height:30px;
+  color:aliceblue;
+  background-color: rgb(100, 149, 237);
+  border:1px solid aliceblue;
+  border-radius:2px;
+  transition:0.2s;
+}
+
+#add-button:hover{
+  cursor: pointer;
+  background-color:rgb(128, 166, 235);
+}
+
+#add-button:active{
+  border:1px solid rgb(60, 113, 213);
+  transition:0.1s;
+}
+
+
+input[type="checkbox"]{
+  accent-color:rgb(128, 166, 235);
+}
+
+.read-section{
+  display: flex;
+  gap:25px;
+}

@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="main-screen-container">
+    <h1>Welcome to your Library.</h1>
+  </div>
   <div class="screen-container">
     <button id="new-book-button">
       <img class="add-book-icon" src="assets/add-book.svg">
@@ -35,14 +38,16 @@
           <input id="pages" class = "text-input" name="pages" type="number">
         </div>
   
-        <div>
+        <div class="read-section">
           <label for="read-status">Read?</label>
           <input id="read-status" name="read-status" type="checkbox">
         </div>
       </div>
+      <div class="button-container">
         <button id="add-button"type="submit">
           Add
         </button>
+      </div>
     </form>
   </dialog>
   <script src="script.js"></script>
