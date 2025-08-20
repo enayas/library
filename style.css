@@ -156,3 +156,16 @@ select{
   height: 20px;
   color:aliceblue;
 }
+
+.heading{
+  color:cornflowerblue;
+  margin:40px;
+}
+
+hr{
+  width:95vw;
+  border:none;
+  height:1px;
+  background-color: cornflowerblue;
+  margin-bottom:40px;
+}
