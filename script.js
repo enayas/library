@@ -1,6 +1,6 @@
 // const myLibrary = [book1, book2, book3];
 
-function Book(title, author, pages, read){
+function Book(title, author, pages, readStatus){
   id = crypto.randomUUID;
   this.title = title;
   this.author = author;
@@ -10,8 +10,8 @@ function Book(title, author, pages, read){
 
 
 
-function addBookToLibrary(title, author, pages, read){
-  const book = new Book(title, author, Number(pages), read);
+function addBookToLibrary(title, author, pages, readStatus){
+  const book = new Book(title, author, Number(pages), readStatus);
   myLibrary.push(book);
 }
 
@@ -26,3 +26,8 @@ const newBookButton = document.querySelector("#new-book-button");
 newBookButton.addEventListener("click", () =>{
   modal.showModal();
 });
+
+const exitButton = document.querySelector(".close-icon");
+exitButton.addEventListener("click", () => {
+  modal.close();
+})

@@ -76,8 +76,12 @@ dialog::backdrop{
 }
 
 .close-icon{
-  top:5px;
-  left:5px;
+  position:absolute;
+  right:25px;
+  top:15px;
+  cursor:pointer;
+  font-size: 30px;
+  color:aliceblue;
 }
 
 .text-input{
@@ -146,4 +150,9 @@ input[type="checkbox"]{
 .read-section{
   display: flex;
   gap:25px;
+}
+
+select{
+  height: 20px;
+  color:aliceblue;
 }
