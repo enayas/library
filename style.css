@@ -176,6 +176,18 @@ hr{
 }
 
 #book-display{
-  display:grid;
+  display:flex;
+  gap:50px;
+  margin:35px;
+  flex-wrap: wrap;
+}
 
+.card{
+  border: 2px solid cornflowerblue;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width:300px;
+  min-height:300px;
 }

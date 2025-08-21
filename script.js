@@ -19,13 +19,14 @@ function addBookToLibrary(title, author, pages, readStatus){
 
 function createBookCard(book){
   const card = document.createElement("div");
-  const title = document.createElement("h4");
+  card.classList.add("card");
+  const title = document.createElement("h3");
   title.textContent = book.title;
-  const author = document.createElement("h5");
+  const author = document.createElement("h4");
   author.textContent = book.author;
-  const pages = document.createElement("h5");
+  const pages = document.createElement("h4");
   pages.textContent = book.pages;
-  const readStatus = document.createElement("h5");
+  const readStatus = document.createElement("h4");
   readStatus.textContent = book.readStatus;
 
   card.append(title, author, pages, readStatus);
