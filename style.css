@@ -175,7 +175,7 @@ hr{
   margin-bottom:40px;
 }
 
-.book-display{
+#book-display{
   display:grid;
 
 }
