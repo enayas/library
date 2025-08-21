@@ -25,26 +25,26 @@
       <div class="close-icon">&times;</div>
       <h2>Add a New Book:</h2>
     </div>
-    <form>
+    <form id="new-book-form">
       <div id="form">
         <div class="label-and-input">
           <label for="title">Title</label>
-          <input id="title" class = "text-input" name="title" type="text">
+          <input id="title" class = "text-input" name="title" type="text" required>
         </div>
   
         <div class="label-and-input">
           <label for="author">Author</label>
-          <input id="author" class = "text-input" name="author" type="text">
+          <input id="author" class = "text-input" name="author" type="text" required>
         </div>
 
         <div class="label-and-input">
           <label for="pages">Number of Pages</label>
-          <input id="pages" class = "text-input" name="pages" type="number">
+          <input id="pages" class = "text-input" name="pages" type="number" required>
         </div>
 
         <div class="label-and-input">
-          <label for="pages">Number of Pages</label>
-          <select class="text-input" name="read-status">
+          <label for="read-status">Read or Unread?</label>
+          <select id="read-status" class="text-input" name="read-status" required>
             <option value="read">Read</option>
             <option value="unread">Unread</option>
           </select>

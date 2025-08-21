@@ -84,9 +84,13 @@ dialog::backdrop{
   color:aliceblue;
 }
 
+.close-icon:hover{
+  color:rgb(192, 207, 217);
+}
+
 .text-input{
   border:1px solid aliceblue;
-  border-radius: 2px;
+  border-radius: 3px;
   background-color: rgb(128, 166, 235);
   min-height:20px;
   caret-color:aliceblue;
@@ -119,6 +123,7 @@ label{
 h2{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color:aliceblue;
+  margin-bottom:10px;
 }
 
 #add-button{
@@ -128,7 +133,7 @@ h2{
   color:aliceblue;
   background-color: rgb(100, 149, 237);
   border:1px solid aliceblue;
-  border-radius:2px;
+  border-radius:5px;
   transition:0.2s;
 }
 
@@ -168,4 +173,9 @@ hr{
   height:1px;
   background-color: cornflowerblue;
   margin-bottom:40px;
+}
+
+.book-display{
+  display:grid;
+
 }
