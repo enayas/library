@@ -5,7 +5,7 @@ let myLibrary = [];
 // const book3 = new Book("Animal Farm", "George Orwell", 144, true);
 
 function Book(title, author, pages, readStatus){
-  id = crypto.randomUUID;
+  this.id = crypto.randomUUID();
   this.title = title;
   this.author = author;
   this.pages = pages;
@@ -15,6 +15,11 @@ function Book(title, author, pages, readStatus){
 function addBookToLibrary(title, author, pages, readStatus){
   const book = new Book(title, author, Number(pages), readStatus);
   myLibrary.push(book);
+}
+
+function removeBookFromLibrary(id){
+  const index = myLibrary.findIndex(obj => obj.id === id); // finds index position of the book that has the passed id
+  myLibrary.splice(index, 1); 
 }
 
 function createBookCard(book){
@@ -30,7 +35,11 @@ function createBookCard(book){
   readStatus.textContent = book.readStatus;
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "Delete from Library";
-
+  deleteButton.classList.add("delete-button");
+  deleteButton.addEventListener("click", () => {
+    removeBookFromLibrary(book.id);
+    updateCards();
+})
   card.append(title, author, pages, readStatus, deleteButton);
 
   const cardContainer = document.getElementById("book-display");
