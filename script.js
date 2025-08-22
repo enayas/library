@@ -28,15 +28,19 @@ function createBookCard(book){
   pages.textContent = book.pages;
   const readStatus = document.createElement("h4");
   readStatus.textContent = book.readStatus;
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "Delete from Library";
 
-  card.append(title, author, pages, readStatus);
+  card.append(title, author, pages, readStatus, deleteButton);
 
   const cardContainer = document.getElementById("book-display");
   cardContainer.append(card);
 }
 
 function updateCards(){
-  for(book of myLibrary){
+  const cardContainer = document.getElementById("book-display");
+  cardContainer.innerHTML = "";
+  for(const book of myLibrary){
     createBookCard(book);
   }
 }
