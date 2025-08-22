@@ -12,6 +12,14 @@ function Book(title, author, pages, readStatus){
   this.readStatus = readStatus;
 }
 
+Book.prototype.changeReadStatus = function () {
+  if(this.readStatus.equals("Read")){
+    this.readStatus = "Unread";
+  } else {
+    this.readStatus = "Read";
+  }
+}
+
 function addBookToLibrary(title, author, pages, readStatus){
   const book = new Book(title, author, Number(pages), readStatus);
   myLibrary.push(book);
@@ -39,8 +47,15 @@ function createBookCard(book){
   deleteButton.addEventListener("click", () => {
     removeBookFromLibrary(book.id);
     updateCards();
-})
-  card.append(title, author, pages, readStatus, deleteButton);
+  })
+  const changeReadStatusButton = document.createElement("button");
+  changeReadStatusButton.textContent = "Update Status";
+  changeReadStatusButton.classList.add("delete-button");
+  changeReadStatusButton.addEventListener("click", () => {
+    book.changeReadStatus();
+    updateCards();
+  })
+  card.append(title, author, pages, readStatus, deleteButton, changeReadStatusButton);
 
   const cardContainer = document.getElementById("book-display");
   cardContainer.append(card);
@@ -97,3 +112,4 @@ submitButton.addEventListener("click", (event) => {
   updateCards();
   clearFormAndCloseModal();
 });
+
