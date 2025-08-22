@@ -77,6 +77,14 @@ let authorValue = "";
 let pagesValue = 0;
 let readStatusValue = "Unread";
 
+function clearFormAndCloseModal(){
+  modal.close();
+  titleInput.value = "";
+  authorInput.value = "";
+  pagesInput.value = "";
+  readStatusInput.value = "Read";
+}
+
 const submitButton = document.getElementById("add-button");
 submitButton.addEventListener("click", (event) => {
   event.preventDefault();
@@ -87,4 +95,5 @@ submitButton.addEventListener("click", (event) => {
 
   addBookToLibrary(titleValue, authorValue, pagesValue, readStatusValue);
   updateCards();
+  clearFormAndCloseModal();
 });
