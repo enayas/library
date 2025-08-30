@@ -160,6 +160,13 @@ input[type="checkbox"]{
 select{
   height: 20px;
   color:aliceblue;
+  background-color: rgb(128, 166, 235);
+  border:1px solid aliceblue;
+}
+
+.select:focus{
+  outline: none;
+  border: 1px solid rgb(60, 113, 213)
 }
 
 .heading{
@@ -193,7 +200,7 @@ hr{
   padding:10px;
 }
 
-.delete-button{
+.delete-button, .change-read-status-button{
   background-color: cornflowerblue;
   color:aliceblue;
   border:none;
@@ -209,4 +216,12 @@ hr{
 
 .delete-button:active{
   background-color: rgb(190, 212, 252);
+}
+
+.status-button-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
 }

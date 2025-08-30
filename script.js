@@ -13,11 +13,12 @@ function Book(title, author, pages, readStatus){
 }
 
 Book.prototype.changeReadStatus = function () {
-  if(this.readStatus.equals("Read")){
+  if(this.readStatus === "Read"){
     this.readStatus = "Unread";
   } else {
     this.readStatus = "Read";
   }
+  updateCards();
 }
 
 function addBookToLibrary(title, author, pages, readStatus){
@@ -41,6 +42,7 @@ function createBookCard(book){
   pages.textContent = book.pages;
   const readStatus = document.createElement("h4");
   readStatus.textContent = book.readStatus;
+  const buttonWrapper = document.createElement("div");
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "Delete from Library";
   deleteButton.classList.add("delete-button");
@@ -50,12 +52,14 @@ function createBookCard(book){
   })
   const changeReadStatusButton = document.createElement("button");
   changeReadStatusButton.textContent = "Update Status";
-  changeReadStatusButton.classList.add("delete-button");
+  changeReadStatusButton.classList.add("change-read-status-button");
   changeReadStatusButton.addEventListener("click", () => {
     book.changeReadStatus();
     updateCards();
   })
-  card.append(title, author, pages, readStatus, deleteButton, changeReadStatusButton);
+  buttonWrapper.classList.add("status-button-container");
+  buttonWrapper.append(deleteButton, changeReadStatusButton);
+  card.append(title, author, pages, readStatus, buttonWrapper);
 
   const cardContainer = document.getElementById("book-display");
   cardContainer.append(card);
@@ -112,4 +116,3 @@ submitButton.addEventListener("click", (event) => {
   updateCards();
   clearFormAndCloseModal();
 });
-
